@@ -24,4 +24,23 @@ console.log(`Latitud ${marvel.coords.lat}`);
 console.log(`Latitud ${marvel.coords.lng}`);
 //1
 console.log(`Total trajes ${marvel.suit.length}`);
-console.log(`Ultimo traje ${marvel.suit[marvel.length -1]}`);
+console.log(`Ultimo traje ${marvel.suit[marvel.suit.length -1]}`);
+//Imprimir un mensaje en consola si Iroman esta vivo
+marvel.isAlive ? console.log("Esta Vivo") : console.log("Esta Muerto");
+//Eliminar una propiedad del objeto literal
+delete marvel.age;
+console.log(marvel);
+//Obtener par de valores de las propiedades
+//del objeto literal
+const entriesParis = Object.entries(marvel);
+console.log(entriesParis);
+//Bloqueo de propiedades de un Object Literal
+Object.freeze(marvel);
+marvel.name = 'Hul';
+console.log(marvel);
+//Obtener las propiedades del Objeto Literal
+const propiedades = Object.getOwnPropertyDescriptor(marvel);
+console.log({propiedades});
+//Obtener los valores del Objeto Literal
+const valores = Object.values(marvel);
+console.log({propiedades, valores});
